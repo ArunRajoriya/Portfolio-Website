@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to your Lovable project
 
 This project was built with [Lovable](https://lovable.dev).
@@ -27,3 +28,7 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+=======
+# Portfolio-Website
+Personal portfolio website showcasing my projects, skills, experience, and software development journey.
+>>>>>>> b4993320e9bb6f970c0fcef6eaf3f6e41c47993f
