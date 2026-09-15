@@ -1,12 +1,10 @@
-@import "tailwindcss" source(none);
-@source "../src";
+@import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
+@theme {
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -44,7 +42,7 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.13 0.018 225);
+  --background: oklch(13.211% 0.01799 225.355 / 0.655);
   --foreground: oklch(0.95 0.015 165);
   --card: oklch(0.17 0.025 220);
   --card-foreground: oklch(0.95 0.015 165);
@@ -79,10 +77,38 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); }
-  ::selection { background: color-mix(in oklab, var(--color-primary) 35%, transparent); color: var(--color-foreground); }
+  * {
+    border-color: var(--color-border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('/arun-rajoriya-portrait.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    color: var(--color-foreground);
+  }
 }
 
 @utility hero-grid {
@@ -93,21 +119,80 @@
   mask-image: linear-gradient(to bottom, black 78%, transparent);
 }
 
-.project-card { position: relative; overflow: hidden; }
-.project-card::after { content: ""; position: absolute; inset: auto -15% -55% 35%; height: 13rem; border-radius: 50%; filter: blur(70px); opacity: .12; pointer-events: none; background: var(--project-color); }
-.project-mint { --project-color: oklch(0.82 0.18 158); }
-.project-cyan { --project-color: oklch(0.75 0.14 200); }
-.project-lime { --project-color: oklch(0.82 0.16 125); }
-.project-signal { background: var(--project-color); box-shadow: 0 0 18px var(--project-color); }
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
 
-@keyframes reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-.reveal { animation: reveal .7s cubic-bezier(.2,.75,.25,1) both; }
-.reveal-delay-1 { animation: reveal .7s .12s cubic-bezier(.2,.75,.25,1) both; }
-.reveal-delay-2 { animation: reveal .7s .22s cubic-bezier(.2,.75,.25,1) both; }
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -15% -55% 35%;
+  height: 13rem;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.12;
+  pointer-events: none;
+  background: var(--project-color);
+}
 
-@keyframes status-pulse { 50% { opacity: .35; box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-primary) 8%, transparent); } }
-.status-dot { animation: status-pulse 2s ease-in-out infinite; }
+.project-mint {
+  --project-color: oklch(0.82 0.18 158);
+}
+
+.project-cyan {
+  --project-color: oklch(0.75 0.14 200);
+}
+
+.project-lime {
+  --project-color: oklch(0.82 0.16 125);
+}
+
+.project-signal {
+  background: var(--project-color);
+  box-shadow: 0 0 18px var(--project-color);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: reveal 0.7s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.reveal-delay-1 {
+  animation: reveal 0.7s 0.12s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.reveal-delay-2 {
+  animation: reveal 0.7s 0.22s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+@keyframes status-pulse {
+  50% {
+    opacity: 0.35;
+    box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-primary) 8%, transparent);
+  }
+}
+
+.status-dot {
+  animation: status-pulse 2s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

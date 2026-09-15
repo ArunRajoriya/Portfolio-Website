@@ -53,6 +53,7 @@ const projects = [
     metric: "Audio → action",
     stack: ["Python", "FastAPI", "Groq", "Whisper", "Render"],
     tone: "project-cyan",
+    link: "https://meeting-intelligence-system-weld.vercel.app/",
   },
   {
     index: "03",
@@ -74,6 +75,7 @@ const projects = [
     metric: "10k+ records",
     stack: ["FastAPI", "SQLite", "RAG", "REST"],
     tone: "project-mint",
+    link: "https://metropolitan-cities-crime-statistic.vercel.app/",
   },
 ];
 
@@ -178,9 +180,9 @@ function Index() {
             </div>
 
             <div className="reveal-delay-2 mt-12 grid max-w-xl grid-cols-3 divide-x divide-border/50 rounded-lg border border-primary/25 bg-primary/10 p-1 backdrop-blur-md sm:mt-auto">
-              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-primary">&lt;200</strong><p className="mt-1 text-[10px] text-muted-foreground">ms / p95</p></div>
-              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-foreground">10k+</strong><p className="mt-1 text-[10px] text-muted-foreground">records</p></div>
-              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-foreground">40%</strong><p className="mt-1 text-[10px] text-muted-foreground">faster</p></div>
+              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-primary">99.82%</strong><p className="mt-1 text-[10px] text-muted-foreground">ML accuracy</p></div>
+              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-foreground">10K+</strong><p className="mt-1 text-[10px] text-muted-foreground">records processed</p></div>
+              <div className="flex flex-col justify-center p-4"><strong className="font-mono text-2xl text-foreground">40%</strong><p className="mt-1 text-[10px] text-muted-foreground">faster queries</p></div>
             </div>
           </div>
         </section>
@@ -263,7 +265,10 @@ function Index() {
         <section className="px-5 py-24 md:px-8">
           <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-12">
             <div className="rounded-lg border border-border bg-card p-7 lg:col-span-7 md:p-10"><Label>Availability</Label><h2 className="mt-8 max-w-2xl text-2xl font-semibold tracking-[-0.02em] md:text-3xl">Open to SDE-1, backend, and full-stack opportunities from 2026.</h2><p className="mt-5 max-w-xl leading-relaxed text-muted-foreground">Graduating mid-2026 and available for full-time or internship work — remote or based in India. Comfortable owning services end to end: API design, data layer, background jobs, deployment and monitoring.</p><p className="mt-8 font-mono text-xs text-primary">Bhopal, India · Remote friendly · Replies within a day</p></div>
-            <div className="rounded-lg border border-primary/25 bg-primary p-7 text-primary-foreground lg:col-span-5 md:p-10"><h2 className="text-3xl font-semibold tracking-[-0.02em]">Let&apos;s build something useful.</h2><a href={`mailto:${EMAIL}`} className="mt-10 inline-flex items-center gap-2 rounded-md bg-background px-5 py-3 text-sm font-semibold text-foreground transition-transform hover:-translate-y-0.5">Email Arun <Arrow /></a></div>
+            <div className="rounded-lg border border-border bg-card p-7 lg:col-span-5 md:p-10">
+              <h2 className="text-3xl font-semibold tracking-[-0.02em]">Let&apos;s build something useful.</h2>
+              <a href={`mailto:${EMAIL}`} className="mt-10 inline-flex items-center gap-2 rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:bg-primary/90">Email Arun <Arrow /></a>
+            </div>
 
           </div>
         </section>
