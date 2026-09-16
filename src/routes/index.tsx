@@ -39,7 +39,7 @@ const projects = [
     summary:
       "Production website for a 15+ year elevator company in Bhopal. Modern, responsive design with service showcase, contact forms and business information.",
     metric: "Live client site",
-    stack: ["React", "TanStack", "Tailwind", "Supabase"],
+    stack: ["HTML", "CSS", "JAVASCRIPT",],
     tone: "project-mint",
     link: "https://www.bandhanelevators.in/",
   },
