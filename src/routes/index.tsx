@@ -3,7 +3,6 @@ import { RepoGrid } from "@/components/RepoGrid";
 
 // Asset paths - files should be placed in the public folder
 const PORTRAIT_URL = "/arun-rajoriya-portrait.png";
-const BANNER_URL = "/linkedin-banner.png";
 const RESUME_URL = "/Arun_Rajoriya_Resume.pdf";
 
 export const Route = createFileRoute("/")({
@@ -106,13 +105,13 @@ const experience = [
     role: "B.Tech, Computer Science (AI & ML)",
     org: "Technocrats Institute of Technology Excellence",
     body: "Coursework across data structures, databases, distributed systems and machine learning, applied continuously to production-style side projects. CGPA 7.77/10.",
-    tags: ["Algorithms", "Databases", "ML"],
+    tags: ["Data Structures & Algorithms","OOPS", "Databases", "AI & ML"],
   },
 ];
 
 const stack = [
-  "Python", "FastAPI", "LLMs", "RAG", "PostgreSQL", "Redis", "Celery", "Docker",
-  "React", "Node.js", "Whisper", "MongoDB", "SQL", "C++",
+  "Python", "C++","FastAPI", "LLMs", "RAG", "PostgreSQL", "Redis", "Celery", "Docker",
+  "React", "Node.js", "Whisper", "MongoDB", "SQL" ,
 ];
 
 function Arrow() {
@@ -139,7 +138,7 @@ function Index() {
             <a href="#repos" className="transition-colors hover:text-primary">Repositories</a>
           </div>
 
-          <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-2 rounded-md border border-primary/35 bg-primary/10 px-3 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+          <a href={`https://wa.me/${PHONE.replace(/[^0-9]/g, '')}?text=Hi%20Arun%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect!`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-md border border-primary/35 bg-primary/10 px-3 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
             Let&apos;s talk <Arrow />
           </a>
         </nav>
@@ -192,15 +191,6 @@ function Index() {
             <div key={item} className="rounded-md border border-border bg-card px-4 py-4 text-center font-mono text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary">{item}</div>
           ))}
         </div>
-
-        <figure className="reveal-delay-2 relative mx-auto max-w-7xl overflow-hidden rounded-lg border border-border bg-card px-5 md:px-8">
-          <img
-            src={BANNER_URL}
-            alt="Arun Rajoriya — AIML Engineer, Full Stack Developer, Problem Solver"
-            className="h-auto w-full object-cover"
-            loading="lazy"
-          />
-        </figure>
 
         <section id="work" className="border-b border-border px-5 py-24 md:px-8">
           <div className="mx-auto max-w-7xl">
