@@ -1,95 +1,133 @@
-# Arun Rajoriya — Portfolio Website
+# Arun Rajoriya — Portfolio
 
-> A premium, production-ready portfolio showcasing full-stack engineering expertise with modern frontend architecture, advanced animations, and measurable results.
+A clean, modern portfolio website built with React, TypeScript, and Vite. Showcasing full-stack development projects and technical capabilities.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://arunrajoriya.com)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](<>)
+## 🚀 Tech Stack
 
-## 🚀 Quick Deploy
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool
+- **CSS3** - Custom styling with animations
+- **No external UI libraries** - Clean, maintainable code
 
-### Prerequisites
+## 📦 Installation
 
-- Node.js v18+
-- npm v9+
-
-### Deploy in 3 Steps
-
-1. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-2. **Build for production:**
-
-   ```bash
-   npm run build
-   ```
-
-3. **Deploy:**
-   - **Cloudflare Pages**: Connect GitHub repo, build command: `npm run build`, output: `.output/public`
-   - **Vercel**: Import repo, framework: TanStack Start, auto-deploy
-
-## ✨ Features
-
-- 🎨 Modern React 19 + TypeScript architecture
-- ⚡ GSAP & Framer Motion animations
-- 🌐 Three.js 3D hero background
-- 📱 Fully responsive design
-- 🚀 95+ Lighthouse score
-- 🎯 Production-optimized bundle (~312KB gzipped)
-
-## 🏗️ Tech Stack
-
-**Frontend**: React 19, TypeScript, TanStack Start, Tailwind CSS v4  
-**Animations**: GSAP, Framer Motion, Three.js, Lenis  
-**Infrastructure**: Vite, Cloudflare Pages/Vercel ready
-
-## 📦 Build Output
-
-```
-Client: 311.75 KB gzipped
-Styles: 16.03 KB gzipped
-SSR: Optimized with code splitting
+```bash
+npm install
 ```
 
-## 🎨 Customization
+## 🛠️ Development
 
-Update personal information in `src/routes/index.tsx`:
+```bash
+npm run dev
+```
 
-- Lines 44-47: Contact info (GitHub, LinkedIn, Email, Phone)
-- Lines 49-95: Projects array
-- Lines 97-121: Capabilities
-- Lines 123-148: Experience timeline
-- Lines 150-165: Tech stack
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-Replace:
+## 🏗️ Build
 
-- `/public/arun-rajoriya-portrait.png` - Your professional photo
-- `/public/Arun_Rajoriya_Resume.pdf` - Your resume
+```bash
+npm run build
+```
 
-## 🔧 Scripts
+Builds the app for production to the `dist` folder.
 
-| Command           | Description               |
-| ----------------- | ------------------------- |
-| `npm run dev`     | Start development server  |
-| `npm run build`   | Production build          |
-| `npm run preview` | Preview production build  |
-| `npm run lint`    | Run ESLint                |
-| `npm run format`  | Format code with Prettier |
+## 👀 Preview
 
-## 📜 License
+```bash
+npm run preview
+```
 
-MIT License - feel free to use this template for your own portfolio.
+Preview the production build locally.
+
+## 🚢 Deployment
+
+The built `dist` folder can be deployed to:
+
+### Vercel
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+### Netlify
+```bash
+npm install -g netlify-cli
+netlify deploy --prod --dir=dist
+```
+
+### Cloudflare Pages
+```bash
+npm run build
+# Upload dist folder via Cloudflare Pages dashboard
+```
+
+### GitHub Pages
+1. Build: `npm run build`
+2. Push `dist` folder to `gh-pages` branch
+3. Enable GitHub Pages in repository settings
+
+## 📁 Project Structure
+
+```
+Portfolio-Website/
+├── public/              # Static assets
+│   ├── arun-rajoriya-portrait.png
+│   ├── Arun_Rajoriya_Resume.pdf
+│   └── favicon files
+├── src/
+│   ├── components/      # React components
+│   │   ├── Header.tsx/css
+│   │   ├── Hero.tsx/css
+│   │   ├── TechStack.tsx/css
+│   │   ├── Projects.tsx/css
+│   │   ├── Capabilities.tsx/css
+│   │   ├── Experience.tsx/css
+│   │   ├── Contact.tsx/css
+│   │   └── Footer.tsx/css
+│   ├── App.tsx          # Main app component
+│   ├── App.css          # App styles
+│   ├── main.tsx         # Entry point
+│   └── index.css        # Global styles
+├── index.html           # HTML template
+├── vite.config.ts       # Vite configuration
+├── tsconfig.json        # TypeScript configuration
+└── package.json         # Dependencies
+
+```
+
+## 🎨 Features
+
+- ✅ Fully responsive design
+- ✅ Smooth scroll navigation
+- ✅ Pure CSS animations (no libraries)
+- ✅ Dark theme optimized
+- ✅ Performance optimized
+- ✅ SEO friendly
+- ✅ Type-safe with TypeScript
+- ✅ Fast builds with Vite
+
+## 📊 Build Size
+
+```
+dist/index.html                    0.93 kB
+dist/assets/index.css             13.94 kB │ gzip:  2.93 kB
+dist/assets/index.js             157.19 kB │ gzip: 50.01 kB
+```
+
+## 📝 License
+
+MIT License - see [LICENSE](LICENSE) file for details
 
 ## 👤 Author
 
 **Arun Rajoriya**
 
-- Website: [arunrajoriya.com](https://arunrajoriya.com)
-- GitHub: [@ArunRajoriya](https://github.com/ArunRajoriya)
-- LinkedIn: [Arun Rajoriya](https://linkedin.com/in/arun-rajoriya-587a6a252)
+- Portfolio: [Your deployed URL]
+- LinkedIn: [linkedin.com/in/arun-rajoriya](https://www.linkedin.com/in/arun-rajoriya/)
+- GitHub: [github.com/Arunraj-Logarajah](https://github.com/Arunraj-Logarajah)
+- Email: arunrajoriya7024@gmail.com
 
 ---
 
-Built with React, TypeScript, and modern web technologies.
+Built with ❤️ using React + TypeScript + Vite

@@ -1,0 +1,67 @@
+.capabilities {
+  padding: 6rem 0;
+  background-color: rgba(30, 41, 59, 0.3);
+}
+
+.capabilities-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.capability-card {
+  padding: 2rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  transition: all 0.3s;
+}
+
+.capability-card:hover {
+  border-color: rgba(8, 145, 178, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.capability-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.capability-description {
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.capability-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.25rem 0.625rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.625rem;
+  color: var(--muted);
+  background-color: rgba(8, 145, 178, 0.05);
+  border: 1px solid rgba(8, 145, 178, 0.2);
+  border-radius: 0.375rem;
+  transition: all 0.2s;
+}
+
+.skill-tag:hover {
+  border-color: rgba(8, 145, 178, 0.5);
+  color: var(--primary);
+  background-color: rgba(8, 145, 178, 0.1);
+}
