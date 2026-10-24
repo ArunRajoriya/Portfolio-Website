@@ -4,7 +4,7 @@
 @theme {
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -80,23 +80,23 @@
   * {
     border-color: var(--color-border);
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     margin: 0;
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  
+
   body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url('/arun-rajoriya-portrait.png');
+    background-image: url("/arun-rajoriya-portrait.png");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@
     pointer-events: none;
     z-index: -1;
   }
-  
+
   ::selection {
     background: color-mix(in oklab, var(--color-primary) 35%, transparent);
     color: var(--color-foreground);
@@ -113,8 +113,16 @@
 
 @utility hero-grid {
   background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--color-primary) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-primary) 7%, transparent) 1px, transparent 1px);
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-primary) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-primary) 7%, transparent) 1px,
+      transparent 1px
+    );
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, black 78%, transparent);
 }
@@ -194,5 +202,162 @@
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Additional premium animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Smooth scroll enhancements */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom cursor effect (optional) */
+@media (hover: hover) and (pointer: fine) {
+  .tech-card,
+  .project-card {
+    cursor: pointer;
+  }
+}
+
+/* Mobile-first responsive enhancements */
+@media (max-width: 768px) {
+  /* Disable 3D effects on mobile for performance */
+  .project-card {
+    transform: none !important;
+  }
+
+  /* Better touch targets */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Optimized font sizes for mobile */
+  h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  /* Reduced motion for mobile */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-section {
+    min-height: 80vh;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body::before {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* Utility classes for responsive behavior */
+.touch-action-pan-y {
+  touch-action: pan-y;
+}
+
+.touch-action-none {
+  touch-action: none;
+}
+
+/* Focus visible for keyboard navigation */
+@supports selector(:focus-visible) {
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
   }
 }
