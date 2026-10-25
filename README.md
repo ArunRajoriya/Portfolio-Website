@@ -123,11 +123,9 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 **Arun Rajoriya**
 
-- Portfolio: [Your deployed URL]
-- LinkedIn: [linkedin.com/in/arun-rajoriya](https://www.linkedin.com/in/arun-rajoriya/)
-- GitHub: [github.com/Arunraj-Logarajah](https://github.com/Arunraj-Logarajah)
-- Email: arunrajoriya7024@gmail.com
+- Portfolio: [https://portfolio-website-alpha-self-53.vercel.app](https://portfolio-website-alpha-self-53.vercel.app)
+- LinkedIn: [linkedin.com/in/arun-rajoriya-587a6a252](https://www.linkedin.com/in/arun-rajoriya-587a6a252/)
+- GitHub: [github.com/ArunRajoriya](https://github.com/ArunRajoriya)
+- Email: arunrajoriya2004@gmail.com
 
----
 
-Built with ❤️ using React + TypeScript + Vite

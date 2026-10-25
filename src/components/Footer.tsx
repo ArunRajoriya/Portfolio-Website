@@ -27,8 +27,8 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">Connect</h4>
             <nav className="footer-nav">
-              <a href="https://www.linkedin.com/in/arun-rajoriya/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://github.com/Arunraj-Logarajah" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/arun-rajoriya-587a6a252/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/ArunRajoriya" target="_blank" rel="noreferrer">GitHub</a>
               <a href="mailto:arunrajoriya2004@gmail.com">Email</a>
               <a href="/Arun_Rajoriya_Resume.pdf" download>Resume</a>
             </nav>
